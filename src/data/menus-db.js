@@ -51,4 +51,27 @@ const headerLink = [
     }
 ]
 
-export {headerLink} 
+const ctaLinks = [
+    {
+        label: "digital comics" ,
+        src : './src/assets/img/buy-comics-digital-comics.png'
+    },
+    {
+        label: "dc merchandise" ,
+        src : './src/assets/img/buy-comics-merchandise.png'
+    },
+    {
+        label: "subscription" ,
+        src : './src/assets/img/buy-comics-subscriptions.png'
+    },
+    {
+        label: "comic shop locator" ,
+        src : './src/assets/img/buy-comics-shop-locator.png'
+    },
+    {
+        label: "dc power visa" ,
+        src : './src/assets/img/buy-dc-power-visa.svg'
+    },
+]
+
+export {headerLink, ctaLinks} 

@@ -1,8 +1,10 @@
 <script>
+import {ctaLinks} from "../data/menus-db"
 export default {
 data(){
     return{
-      name : "cta"
+        ctaLinks,
+
     }
 }  
 }
@@ -11,29 +13,12 @@ data(){
 <template>
 <div class="main-wrapper">
     <div class="container">
+
         <ul>
-            <!-- TODO: AUTOMATIC PRINT FUNCTION -->
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p>label img</p>
+            <li v-for="(product, index) in ctaLinks" :key="index">
+                <img :src=" product.src" :alt="product.src">
+                <p>{{ product.label }}</p>
             </li>
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p>label img</p>
-            </li>
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p>label img</p>
-            </li>
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p>label img</p>
-            </li>
-            <li>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                <p>label img</p>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -59,9 +44,15 @@ data(){
                 display: flex;
                 align-items: center;
                 gap: 15px;
+                cursor: pointer;
+
+                &:hover{
+                    transform: scale(1.2);
+                    transition: .5s;
+                }
                 
                 img{
-                    height: 75px;
+                    height: 50px;
                 }
                 p{
                     color: white;
