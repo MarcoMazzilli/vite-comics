@@ -50,3 +50,5 @@ const headerLink = [
         active: false
     }
 ]
+
+export {headerLink}
