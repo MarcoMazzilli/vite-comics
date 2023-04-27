@@ -1,4 +1,5 @@
 <script>
+import CtaSection from './components/Cta-section.vue';
 import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
@@ -12,7 +13,8 @@ export default {
     components: { 
       Header,
       Main,
-      Footer }
+      Footer,
+      CtaSection }
 }
 </script>
 <!-- /SCRIPT -->
@@ -23,6 +25,8 @@ export default {
   <Header />
   
   <Main />
+
+  <cta-section />
   
   <Footer />
   
