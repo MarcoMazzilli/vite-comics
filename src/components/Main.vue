@@ -2,22 +2,36 @@
 export default {
 data(){
     return{
-      name : "Main"
+      message : "--> Content goes Here! <--"
     }
 }  
 }
 </script>
 
 <template>
-  <h1>{{ name }}</h1>
+  <div class="main-wrapper">
+    
+    <div class="container">
+      
+      <h1>{{ message }}</h1>
+      
+    </div>
+
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
 @use "../../src/scss/partials/vars" as * ;
 
-h1{
-    background-color: $bg-main;
-}
+.main-wrapper{
+  background-color: $bg-main;
+  
+  .container{
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    color: white;
+  }
 
+}
 </style>
