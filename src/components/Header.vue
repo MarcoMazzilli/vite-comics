@@ -5,8 +5,9 @@ data(){
     return{
       headerLink,
     }
-}  
 }
+}
+
 </script>
 
 <template>
@@ -16,7 +17,9 @@ data(){
     <img src="../assets/img/dc-logo.png" alt="">
 
     <ul>
-        <li v-for="(link, index) in headerLink" :key="index"><a :href="link.url">{{link.label}}</a></li>
+        <li @click="link.active = !link.active" v-for="(link, index) in headerLink" :key="index" :class="{ 'active' : link.active }">
+            <a :href="link.url">{{link.label}}</a>
+        </li>
     </ul>
 
   </div>
