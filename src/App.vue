@@ -3,6 +3,7 @@ import CtaSection from './components/Cta-section.vue';
 import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
+import SocialFooterSection from './components/Social-footer-section.vue';
 
 export default {
     data() {
@@ -10,11 +11,13 @@ export default {
             name: "Marco"
         };
     },
-    components: { 
-      Header,
-      Main,
-      Footer,
-      CtaSection }
+    components: {
+    Header,
+    Main,
+    Footer,
+    CtaSection,
+    SocialFooterSection
+}
 }
 </script>
 <!-- /SCRIPT -->
@@ -26,9 +29,11 @@ export default {
   
   <Main />
 
-  <cta-section />
+  <Cta-section />
   
   <Footer />
+
+  <SocialFooterSection />
   
 </template>
 <!-- /TEMPLATE -->
