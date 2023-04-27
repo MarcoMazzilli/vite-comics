@@ -1,8 +1,10 @@
 <script>
+import {footerLink} from "../data/menus-db"
+
 export default {
 data(){
     return{
-      name : "Footer"
+      footerLink,
     }
 }  
 }
@@ -17,40 +19,28 @@ data(){
       <div class="col">
         <ul>
           <h4>DC COMICS</h4>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
+          <li v-for="(title,index) in footerLink[0].dcComics" :key="index"><a :href="title.url"> {{ title.label }} </a></li>
         </ul>
 
         <ul>
-          <h4>Shop</h4>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
+          <h4>SHOP</h4>
+          <li v-for="(title,index) in footerLink[1].shop" :key="index"><a href="#">{{ title.label }}</a></li>
+
         </ul>
 
       </div>
 
       <div class="col">
         <ul>
-          <h4>DC COMICS</h4>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
+          <h4>DC</h4>
+          <li v-for="(title,index) in footerLink[2].dc" :key="index"><a href="#">{{ title.label }}</a></li>
         </ul>
       </div>
 
       <div class="col">
         <ul>
-          <h4>DC COMICS</h4>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
+          <h4>SITES</h4>
+          <li v-for="(title,index) in footerLink[3].sites" :key="index"><a href="#">{{ title.label }}</a></li>
         </ul>
       </div>
 
@@ -95,6 +85,9 @@ data(){
 
           li{
             margin: 5px 0;
+            &:hover a{
+              color: white;
+            }
 
             a{
               color: $main-light-grey;
