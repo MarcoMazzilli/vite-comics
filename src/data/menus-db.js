@@ -194,4 +194,12 @@ const footerLink = [
     },
 ]
 
-export {headerLink, ctaLinks, footerLink} 
+ const footerSocialIcons = [
+    "./src/assets/img/social-icons/footer-facebook.png",
+    "./src/assets/img/social-icons/footer-periscope.png",
+    "./src/assets/img/social-icons/footer-pinterest.png",
+    "./src/assets/img/social-icons/footer-twitter.png",
+    "./src/assets/img/social-icons/footer-youtube.png",
+ ]
+
+export {headerLink, ctaLinks, footerLink, footerSocialIcons} 

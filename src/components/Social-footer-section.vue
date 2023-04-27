@@ -1,9 +1,11 @@
 
 <script>
+import {footerSocialIcons} from "../data/menus-db"
+
 export default {
     data(){
     return{
-      name : "Footer social"
+      footerSocialIcons,
     }
 }  
 }
@@ -22,11 +24,7 @@ export default {
             <h3>follow us</h3>
             <!-- TODO: AUTO PRINT FUNCTION -->
             <ul>
-                <li><img src="../assets/img/social-icons/footer-facebook.png" alt=""></li>
-                <li><img src="../assets/img/social-icons/footer-facebook.png" alt=""></li>
-                <li><img src="../assets/img/social-icons/footer-facebook.png" alt=""></li>
-                <li><img src="../assets/img/social-icons/footer-facebook.png" alt=""></li>
-                <li><img src="../assets/img/social-icons/footer-facebook.png" alt=""></li>
+                <li v-for="(src,i) in footerSocialIcons" :key="i"><img :src="src" alt=""></li>
             </ul>
         </div>
 
@@ -74,6 +72,13 @@ export default {
                 display: flex;
                 list-style: none;
                 gap: 20px;
+
+                li{
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
     }
