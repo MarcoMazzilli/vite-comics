@@ -2,7 +2,7 @@ const headerLink = [
     {
         label:"characters",
         url:"#",
-        active: false
+        active: true
     },
     {
         label:"comics",

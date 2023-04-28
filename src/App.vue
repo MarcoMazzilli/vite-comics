@@ -1,9 +1,10 @@
 <script>
-import CtaSection from './components/Cta-section.vue';
-import Footer from './components/Footer.vue';
-import Header from './components/Header.vue';
-import Main from './components/Main.vue';
-import SocialFooterSection from './components/Social-footer-section.vue';
+import CtaSection            from './components/Cta-section.vue';
+import Footer                from './components/Footer.vue';
+import Header                from './components/Header.vue';
+import Main                  from './components/Main.vue';
+import SocialFooterSection   from './components/Social-footer-section.vue';
+import Jumbotron             from './components/Jumbotron.vue';
 
 export default {
     data() {
@@ -16,7 +17,8 @@ export default {
     Main,
     Footer,
     CtaSection,
-    SocialFooterSection
+    SocialFooterSection,
+    Jumbotron,
 }
 }
 </script>
@@ -26,7 +28,9 @@ export default {
 <template>
   
   <Header />
-  
+
+  <Jumbotron />
+    
   <Main />
 
   <Cta-section />
