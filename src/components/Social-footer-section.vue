@@ -22,7 +22,6 @@ export default {
 
         <div class="social-icons">
             <h3>follow us</h3>
-            <!-- TODO: AUTO PRINT FUNCTION -->
             <ul>
                 <li v-for="(src,i) in footerSocialIcons" :key="i"><img :src="src" alt=""></li>
             </ul>

@@ -3,7 +3,8 @@ import {headerLink} from "../data/menus-db"
 export default {
 data(){
     return{
-      headerLink,
+        headerLink,
+        activeIndex : 1,
     }
 }
 }
@@ -12,17 +13,17 @@ data(){
 
 <template>
 
-  <div class="container">
+<div class="container">
 
     <img src="../assets/img/dc-logo.png" alt="">
 
     <ul>
-        <li @click="link.active = !link.active" v-for="(link, index) in headerLink" :key="index" :class="{ 'active' : link.active }">
+        <li @click="activeIndex = index" v-for="(link, index) in headerLink" :key="index" :class="{ ' active' : index == activeIndex  }">
             <a :href="link.url">{{link.label}}</a>
         </li>
     </ul>
 
-  </div>
+</div>
 
 </template>
 
@@ -52,7 +53,6 @@ ul{
         border-bottom: 5px solid $bg-header;
         margin: 0 10px;
         
-        // TODO: add class active on <li> element
         &:hover, &.active{
             border-bottom: 5px solid $main-blue;
             cursor: pointer;

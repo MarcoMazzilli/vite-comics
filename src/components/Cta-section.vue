@@ -6,7 +6,12 @@ data(){
         ctaLinks,
 
     }
-}  
+},
+methods:{
+    getImage(img){
+    return new URL(img, import.meta.url).href;
+  }
+}
 }
 </script>
 
@@ -16,7 +21,7 @@ data(){
 
         <ul>
             <li v-for="(product, index) in ctaLinks" :key="index">
-                <img :src=" product.src" :alt="product.src">
+                <img :src="getImage(product.src)" :alt="product.label">
                 <p>{{ product.label }}</p>
             </li>
         </ul>

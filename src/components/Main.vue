@@ -11,6 +11,12 @@ data(){
   },  
   components:{
     CardVue,
+  },
+  methods:{
+    getImage(img){
+    return new URL(img, import.meta.url).href;
+  }
+
   }
 }
 </script>
@@ -22,7 +28,7 @@ data(){
       
       <CardVue 
       v-for="(film , index) in arrayFilm" :key="index" 
-      :img="film.thumb"
+      :img="getImage(film.thumb)"
       :text="film.series"
       />
       
